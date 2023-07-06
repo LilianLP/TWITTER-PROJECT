@@ -1,0 +1,268 @@
+:root {
+    --twitter-light: #ffffff;
+    --twitter-dark: #15202b;
+    --twitter-blue: #1da1f2;
+  }
+  
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  .sticky-sidebar {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+  }
+  
+  .row.h-100 {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    height: 100vh;
+    max-height: 100vh;
+  }
+
+
+  
+  @media (min-width: 768px) {
+    .row.h-100 {
+      flex-wrap: nowrap;
+    }
+  }
+  
+  @media (max-width: 767px) {
+    .row.h-100 {
+      flex-wrap: wrap;
+    }
+  }
+  
+  .d-none {
+    color : #000 !important;
+  }
+
+  .fa-twitter {
+    color: #000 !important;
+  }
+
+  .left-sidebar,
+  .right-sidebar {
+    flex: 0 0 auto;
+  }
+  
+  .main-content {
+    flex: 1 1 auto;
+    overflow-y: scroll;
+  }
+  
+  .light-mode {
+    background-color: var(--twitter-light);
+  }
+  
+  .dark-mode {
+    background-color: var(--twitter-dark);
+    color: var(--twitter-light);
+  }
+  
+  .nav-item {
+    margin-top: 20px;
+  }
+  
+  .container-fluid {
+    max-width: 1920px;
+    overflow-x: hidden;
+  }
+  
+  .row.h-100 {
+    min-height: 100vh;
+  }
+  
+  .left-sidebar,
+  .right-sidebar {
+    padding: 1rem;
+    box-sizing: border-box;
+  }
+  
+  .left-sidebar {
+    border-right: 1px solid #ccc;
+    position: sticky;
+  }
+  
+  .custom-md-85 {
+    flex: 0 0 72%;
+    max-width: 72%;
+  }
+  
+  .main-content {
+    padding: 1rem;
+    box-sizing: border-box;
+  }
+  
+  .nav-link {
+    margin-bottom: 0.5rem;
+    margin-top: 10px;
+  }
+  
+  .trends {
+    margin-top: 1rem;
+  }
+  
+  textarea {
+    resize: none;
+  }
+  
+  .tweet {
+    border: 1px solid #ccc;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px;
+  }
+  
+  .tweet-container {
+    position: relative;
+    border-bottom: 1px solid #ccc;
+    padding: 1rem 0;
+  }
+  
+  .tweet-author {
+    font-weight: bold;
+  }
+  
+  .tweet-time {
+    color: #999;
+  }
+  
+  .tweet-message {
+    font-size: 20px;
+  }
+  
+  .right-sidebar {
+    position: sticky;
+    top: 0;
+    border-left: 1px solid #ccc;
+  }
+  
+  .navbar-brand {
+    font-size: 30px;
+  }
+  
+  .dark .nav-link,
+  .dark .trends h3,
+  .dark .trends li {
+    color: var(--twitter-light);
+  }
+  
+  .dark .left-sidebar,
+  .dark .right-sidebar {
+    background-color: var(--twitter-dark);
+  }
+  
+  .dark .form-control {
+    background-color: var(--twitter-darker);
+    color: var(--twitter-light);
+    border-color: rgba(255, 255, 255, 0.2);
+  }
+  
+  .dark .btn-outline-success {
+    color: var(--twitter-light);
+    border-color: var(--twitter-light);
+  }
+  
+  .dark .btn-outline-success:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255,  255, 0.4);
+}
+
+.dark {
+  background-color: var(--twitter-dark);
+}
+
+.dark .navbar-brand {
+  color: var(--twitter-light);
+}
+
+.dark .navbar-brand:hover,
+.dark .navbar-brand:focus,
+.dark .navbar-brand:active,
+.dark .navbar-brand:visited {
+  color: var(--twitter-light);
+}
+
+.nav-text {
+  display: none;
+}
+
+.nav-icon {
+  display: inline;
+}
+
+.twitter-logo {
+  display: none;
+}
+
+.nav-icon-only {
+  width: 100%;
+  justify-content: center;
+}
+
+.nav-icon-only i {
+  margin-right: 0;
+}
+
+.left-sidebar {
+  padding-top: 0;
+}
+
+.left-sidebar form {
+  position: sticky;
+  top: 0;
+  padding: 1rem;
+  background-color: inherit;
+  z-index: 10;
+}
+
+.main-content {
+  padding-left: 0;
+  margin-left: 0;
+  width: calc(100% - 2rem); /* Subtract the width of the left navbar */
+}
+
+@media (min-width: 768px) {
+  .nav-text {
+    display: inline;
+  }
+
+  .nav-icon {
+    display: none;
+  }
+
+  .twitter-logo {
+    display: block;
+  }
+
+  .nav-icon-only {
+    width: auto;
+    justify-content: flex-start;
+  }
+
+  .nav-icon-only i {
+    margin-right: 5px;
+  }
+
+  .left-sidebar {
+    padding-top: 1rem;
+  }
+
+  .left-sidebar form {
+    position: static;
+    padding: 0;
+    background-color: inherit;
+  }
+
+  .main-content {
+    padding-left: 1rem;
+    margin-left: 1rem;
+    width: calc(100% - 3rem); /* Subtract the width of the left navbar */
+  }
+}
+  
